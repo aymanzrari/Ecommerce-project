@@ -35,7 +35,7 @@ public class MyDataRestConfig implements RepositoryRestConfigurer {
     @Override
     public void configureRepositoryRestConfiguration(RepositoryRestConfiguration config) {
 
-        HttpMethod[] theUnsupportedActions = {HttpMethod.PUT, HttpMethod.POST, HttpMethod.DELETE};
+      /*  HttpMethod[] theUnsupportedActions = {HttpMethod.PUT, HttpMethod.DELETE};
 
         disableHttpMethods(Product.class,config, theUnsupportedActions);
         disableHttpMethods(ProductCategory.class,config, theUnsupportedActions);
@@ -44,6 +44,7 @@ public class MyDataRestConfig implements RepositoryRestConfigurer {
 
         // call an internal helper method
         exposeIds(config);
+*/
     }
 
     private void disableHttpMethods(Class theClass ,RepositoryRestConfiguration config, HttpMethod[] theUnsupportedActions) {
@@ -69,4 +70,8 @@ public class MyDataRestConfig implements RepositoryRestConfigurer {
         Class[] domainTypes = entityClasses.toArray(new Class[0]);
         config.exposeIdsFor(domainTypes);
     }
+
+
+
+
 }
